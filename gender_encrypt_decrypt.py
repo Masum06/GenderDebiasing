@@ -35,15 +35,15 @@ for (h1,h2,h3,h4,h5) in zip(male_hons, female_hons, neutral_hons, married_hons, 
 
 import json
 
-char2idx = 'gender-resources/char2idx.json'
-idx2char = 'gender-resources/idx2char.json'
+char2idx = 'resources/char2idx.json'
+idx2char = 'resources/idx2char.json'
 with open(char2idx, 'r') as fp:
     char2idx = json.load(fp)
     
 with open(idx2char, 'r') as fp:
     idx2char = json.load(fp)
 
-model_name = 'gender-resources/char_rnn_hsc_model_0.h5'
+model_name = 'resources/char_rnn_hsc_model_0.h5'
 model = load_model(model_name)
 
 import en_core_web_lg
